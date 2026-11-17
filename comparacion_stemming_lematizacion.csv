@@ -1,0 +1,16 @@
+﻿Palabra original,Stemming,Lematización,¿Coinciden?
+ejemplares,ejemplar,ejemplar,True
+títulos,titul,título,False
+similares,similar,similar,True
+versiones,version,versión,False
+metadatos,metadat,metadato,False
+inglesa,ingles,inglés,False
+français,français,françai,False
+puesta,puest,puesto,False
+fines,fin,fin,True
+famosos,famos,famoso,False
+campos,camp,campo,False
+calurosos,calur,caluroso,False
+hallaron,hall,hallar,False
+muchachos,muchach,muchacho,False
+años,años,año,False
