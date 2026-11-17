@@ -62,6 +62,21 @@ extractor = ExtractorTexto()
 extractor.feed(html)
 
 texto = "\n".join(extractor.fragmentos)
+# Eliminar encabezados y elementos de navegación de Wikisource
+inicio = texto.find("En la venta del Molinillo")
+
+if inicio == -1:
+    raise ValueError("No se encontró el inicio del texto de la novela.")
+
+texto = texto[inicio:]
+
+# Eliminar el pie de página de Wikisource
+fin = texto.find("Obtenido de «")
+
+if fin != -1:
+    texto = texto[:fin]
+
+texto = texto.strip()
 
 if len(texto) < 1000:
     raise ValueError("No se pudo extraer suficiente texto de la página.")
