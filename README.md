@@ -201,4 +201,37 @@ Por esta razón, ambos métodos pueden producir resultados diferentes.
 \- `comparacion\_stemming\_lematizacion.csv`: contiene ejemplos de comparación entre ambas técnicas.
 
 
+## Checkpoint 2 - Representación vectorial y semántica
+
+En esta segunda etapa se implementaron técnicas de extracción de características para transformar el texto lematizado en representaciones numéricas.
+
+### Técnicas implementadas
+
+- **Bag of Words (BoW):** representa cada oración mediante la frecuencia de aparición de las palabras.
+- **TF-IDF:** calcula el peso de los términos considerando su frecuencia dentro de una oración y su presencia en el resto de los documentos.
+- **PCA:** reduce las dimensiones de las representaciones vectoriales para visualizar las palabras en un espacio tridimensional.
+
+### Justificación de los modelos
+
+Bag of Words permite conocer la frecuencia de los términos y constituye una representación sencilla para analizar el contenido de los textos. Su limitación es que no conserva el orden ni el contexto de las palabras.
+
+TF-IDF complementa este enfoque al asignar mayor importancia a los términos que distinguen una oración del resto del corpus, reduciendo el peso de aquellos que aparecen de manera generalizada.
+
+PCA permite reducir la dimensionalidad de los datos y facilita su exploración visual. La gráfica utiliza las 40 palabras más frecuentes para mejorar su legibilidad.
+
+### Ejecución
+
+```powershell
+python vectorizacion_texto.py
+```
+
+### Archivos generados
+
+- corpus_lematizado_oraciones.txt
+- matriz_bow.npz
+- matriz_tfidf.npz
+- resultados_vectorizacion.csv
+- comparacion_vectorial_3d.png
+
+
 
