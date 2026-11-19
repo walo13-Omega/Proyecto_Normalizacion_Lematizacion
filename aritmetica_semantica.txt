@@ -1,0 +1,9 @@
+EXPERIMENTO DE ARITMETICA SEMANTICA
+Operacion: monipodio + rincon - senor
+
+Resultados:
+escoba: 0.4900
+plática: 0.4880
+prometer: 0.4778
+repolido: 0.4740
+abrazar: 0.4716

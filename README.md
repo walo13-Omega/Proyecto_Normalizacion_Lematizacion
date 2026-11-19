@@ -234,4 +234,62 @@ python vectorizacion_texto.py
 - comparacion_vectorial_3d.png
 
 
+## Checkpoint 3 - Semántica distribucional
+
+En esta etapa se implementó una representación semántica distribuida utilizando Word2Vec mediante la librería Gensim.
+
+### Preparación del corpus
+
+Se utilizó spaCy con el modelo de español `es_core_news_sm` para procesar el texto de Rinconete y Cortadillo. Se realizó tokenización, eliminación de palabras vacías y puntuación, conversión a minúsculas y lematización.
+
+El corpus resultante contiene 347 oraciones y se utilizó para entrenar el modelo.
+
+### Modelo Word2Vec
+
+Se implementó Word2Vec utilizando el algoritmo Skip-gram, que aprende a predecir las palabras del contexto a partir de una palabra central.
+
+Parámetros utilizados:
+
+- vector_size: 50 dimensiones
+- window: 5 palabras
+- min_count: 2
+- sg: 1 (Skip-gram)
+- epochs: 100
+- seed: 42
+
+El modelo obtuvo un vocabulario de 760 palabras.
+
+### Exploración semántica
+
+Se utilizó `most_similar()` para identificar palabras cercanas dentro del espacio vectorial.
+
+También se realizó un experimento de aritmética semántica:
+
+`monipodio + rincón - señor`
+
+Este procedimiento permite explorar las relaciones matemáticas entre los embeddings.
+
+### Reducción de dimensionalidad
+
+Se aplicó PCA para reducir los vectores de 50 dimensiones a tres componentes principales y representar las palabras en un espacio tridimensional.
+
+La varianza explicada por los tres componentes fue de 17.29 %.
+
+### Archivos generados
+
+- corpus_semantico_lematizado.txt
+- modelo_word2vec.model
+- embeddings_word2vec.csv
+- palabras_similares_word2vec.csv
+- aritmetica_semantica.txt
+- espacio_semantico_word2vec_3d.png
+- heatmap_embeddings_word2vec.png
+
+### Ejecución
+
+```powershell
+python semantica_distribucional.py
+```
+
+
 
